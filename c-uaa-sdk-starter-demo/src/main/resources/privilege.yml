@@ -1,0 +1,21 @@
+privilege:
+  # anonymous access 匿名可访问
+  anonymous:
+    - path: /swagger-ui.html
+      methods: post,get
+    - path: /swagger-resources/**
+      methods: post,get
+    - path: /swagger/**
+      methods: post,get
+    - path: /**/v2/api-docs
+      methods: post,get
+    - path: /webjars/springfox-swagger-ui/**
+      methods: post,get
+    - path: /login
+      methods: post
+    - path: /test/anonymous
+      methods: get
+  # anonymous access 登陆可访问
+  authentication:
+    - path: /test/authentication
+      methods: get
